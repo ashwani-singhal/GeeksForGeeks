@@ -1,16 +1,14 @@
 package Array;
 
-import java.io.*;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.io.IOException;
 import java.lang.StringBuilder;
 import java.io.OutputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 
-//  we r given two sorted arrys to merge
+//  we r given two sorted Arrays to merge
 
 
 public class Merge_Without_Extra_Space
@@ -83,7 +81,7 @@ public class Merge_Without_Extra_Space
             merge(ar1,ar2,n,m);
 
 
-	        /*StringBuilder sb = new StringBuilder();
+	       /* StringBuilder sb = new StringBuilder();
 	        for(int i=0;i<n;i++)
 	            sb.append(ar1[i]+" ");
 
