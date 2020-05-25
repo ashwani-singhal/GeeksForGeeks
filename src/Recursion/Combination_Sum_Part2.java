@@ -51,9 +51,6 @@ public class Combination_Sum_Part2 {
             if(current_sum + ar[i] > totalSum)
                 continue;
 
-            if(i == 1 && ar[i] == ar[i-1] && i > index)
-                continue;
-
             currList.append(ar[i]);
 
             CombSum(i+1,current_sum+ar[i],totalSum,currList,ar,set);
