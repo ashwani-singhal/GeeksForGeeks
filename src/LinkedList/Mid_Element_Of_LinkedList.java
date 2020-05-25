@@ -13,6 +13,23 @@ class Node
     }
 }
 
+class GFG
+{
+    // Function to find middle element a linked list
+    int getMiddle(Node head)
+    {
+        // Your code here.
+        Node slow = head, fast = head;
+        while(fast != null && fast.next != null)
+        {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        assert slow != null;
+        return slow.data;
+    }
+}
+
 public class Mid_Element_Of_LinkedList
 {
     Node head;  // head of list
@@ -38,55 +55,22 @@ public class Mid_Element_Of_LinkedList
         while(t>0)
         {
             int n = sc.nextInt();
-            Mid_Element_Of_LinkedList llist = new Mid_Element_Of_LinkedList();
+            Mid_Element_Of_LinkedList list = new Mid_Element_Of_LinkedList();
             //int n=Integer.parseInt(br.readLine());
             int a1=sc.nextInt();
             Node head= new Node(a1);
-            llist.addToTheLast(head);
+            list.addToTheLast(head);
             for (int i = 1; i < n; i++)
             {
                 int a = sc.nextInt();
-                llist.addToTheLast(new Node(a));
+                list.addToTheLast(new Node(a));
             }
 
-            GFG gfgobj = new GFG();
-            //llist.head = new GFG().Middle(llist.head);
-            System.out.println(gfgobj.getMiddle(llist.head));
-            //llist.printList();
+            GFG gfgObj = new GFG();
+            //list.head = new GFG().Middle(list.head);
+            System.out.println(gfgObj.getMiddle(list.head));
+            //list.printList();
             t--;
         }
-    }
-}
-
-// } Driver Code Ends
-
-/* Node of a linked list
- class Node {
-   int data;
-    Node next;
-    Node(int d)  { data = d;  next = null; }
-}
- Linked List class
-class LinkedList
-{
-    Node head;  // head of list
-}
-This is method only submission.  You only need to complete the method. */
-
-
-class GFG
-{
-    // Function to find middle element a linked list
-    int getMiddle(Node head)
-    {
-        // Your code here.
-        Node slow = head, fast = head;
-        while(fast != null && fast.next != null)
-        {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-        assert slow != null;
-        return slow.data;
     }
 }
