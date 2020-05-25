@@ -6,19 +6,21 @@ import java.io.InputStreamReader;
 
 public class Special_Keyword_DP_Optimised {
 
-    private int Specil_Number(int n){
+    private int Special_Number(int n){
+
         if(n <= 6){
             return n;
         }
 
         int[] ar = new int[n+1];
 
-        for (int i = 1; i <=n ; i++) {
+        for (int i = 1; i <=6 ; i++) {
             ar[i] = i;
         }
 
         for (int i = 7; i <= n ; i++) {
-            ar[i] = Math.max(2*ar[n-3],Math.max(3*ar[n-4],4*ar[n-5]));
+            ar[i] = Math.max(2*ar[i-3],Math.max(3*ar[i-4],4*ar[i-5]));
+            //System.out.println(ar[i]);
         }
 
         return ar[n];
@@ -34,7 +36,7 @@ public class Special_Keyword_DP_Optimised {
                 System.out.println(-1);
             }
             else{
-                System.out.println(obj.Specil_Number(n));
+                System.out.println(obj.Special_Number(n));
             }
         }
     }
