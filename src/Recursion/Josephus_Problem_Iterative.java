@@ -12,7 +12,6 @@ public class Josephus_Problem_Iterative {
         for (int i = 2; i <=n ; i++) {
             ans = (ans + k) % i;
         }
-
         return ans + 1;
     }
 
