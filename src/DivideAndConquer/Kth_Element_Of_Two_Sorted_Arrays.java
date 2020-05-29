@@ -1,4 +1,4 @@
-// This algorithm has a linear complexity of O(k)
+// This algorithm has a linear time complexity of O(k)
 
 package DivideAndConquer;
 
