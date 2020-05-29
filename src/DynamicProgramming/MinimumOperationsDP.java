@@ -11,6 +11,8 @@ public class MinimumOperationsDP {
 
         int[] ans = new int[10001];
 
+        // F(n) = min(1+F(n-1),1+F(n/2)+n%2)
+
         for (int i = 1; i < 10001; i++) {
             ans[i] = Math.min(1+ans[i-1],1+ans[i/2]+i%2);
         }
