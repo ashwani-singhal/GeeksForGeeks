@@ -17,10 +17,9 @@ public class MaximumSubsetXOR
             System.out.println(XOR.maxSubarrayXOR(a , n));
         }
     }
-}// } Driver Code Ends
+}
 
 
-/*Complete the function below*/
 class XOR
 {
     public static int maxSubarrayXOR(int[] set, int n)
